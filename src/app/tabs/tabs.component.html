@@ -1,0 +1,47 @@
+<div class="row tabs-content">
+  <div class="col-md-12">
+    <mat-tab-group>
+      <mat-tab label="TRANSAÇÕES">
+        <div class="row tabs-content">
+          <div class="col-md-12">
+            <table class="table table-responsive">
+              <tr>
+                <th>Saldo</th>
+                <th>Histórico</th>
+                <th>Utilizados</th>
+                <th>Perdidos</th>
+              </tr>
+              <tr>
+                <td *ngIf="point; else noth">{{point.total}}</td>
+                <td *ngIf="point; else noth">{{point.total + point.utilizados + point.expirados}}</td>
+                <td *ngIf="point; else noth">{{point.utilizados}}</td>
+                <td *ngIf="point; else noth">{{point.expirados}}</td>
+              </tr>
+            </table>
+            <ng-template #noth>
+              <td>----</td>
+            </ng-template>
+          </div>
+          <div class="col-md-2">
+            <p>Saldo</p>
+            <p>----</p>
+          </div>
+          <div class="col-md-2">
+            <p>Histórico</p>
+            <p>----</p>
+          </div>
+          <div class="col-md-2">
+            <p>Utilizados</p>
+            <p>----</p>
+          </div>
+          <div class="col-md-2">
+            <p>Perdidos</p>
+            <p>----</p>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="BENEFÍCIOS"> Benefícios</mat-tab>
+      <mat-tab label="HISTÓRICO"> Histórico</mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

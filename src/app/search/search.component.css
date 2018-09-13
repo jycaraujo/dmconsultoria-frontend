@@ -1,0 +1,36 @@
+.form-control{
+  width: 100%;
+  border-radius: 0px;
+  background-color: #f4f5f7;
+  padding: 20px;
+  border: none;
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+}
+.search-button{
+  /*padding: 0;*/
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+}
+.form-group{
+  padding: 0;
+  background-color: #f4f5f7;
+  width: 100%;
+}
+.navbar-form{
+  margin: 0;
+  background-color: #f4f5f7;
+}
+.btn{
+  border-radius: 0px;
+  background-color: #f4f5f7;
+}
+.full-field{
+  height: 100%;
+}
+.glyphicon{
+  position:relative;
+  top: calc(50% - 10px);
+}

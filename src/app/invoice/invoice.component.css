@@ -1,0 +1,15 @@
+.add-invoice {
+  padding: 5%;
+  width: 80%;
+}
+.confirm-invoice{
+  padding: 5%;
+  width: 80%;
+}
+.subtitle{
+  font-size: medium;
+  padding-bottom: 10px;
+}
+.full-width{
+  width: 100%;
+}

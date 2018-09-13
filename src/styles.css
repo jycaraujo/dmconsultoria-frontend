@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  font-family: 'Roboto' !important;
+  overflow-x: hidden;
+}
+p{
+  font-size: small;
+  color: #8b8b8b;
+}
+th{
+  font-weight: bold;
+  font-size: small;
+  color: #8b8b8b;
+}
+.header{
+  border: none;
+  border-bottom: 1px solid #e6e6e6;
+  height: 70px;
+}
+.btn-primary{
+  background-color: #44cefe !important;
+  border-color: #a4e7ff !important;
+}
+.btn-light{
+  background-color: white !important;
+  border-color: #ececec !important;
+}
+.btn{
+  border-radius: 0px !important;
+}
+.mat-tab-body-content{
+  overflow-x: hidden !important;
+}

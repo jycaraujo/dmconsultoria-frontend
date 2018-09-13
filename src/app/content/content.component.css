@@ -1,0 +1,16 @@
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 400px;
+  height: 1000px;
+}
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  div.content {margin-left: 0;}
+}
+.title{
+  font-size: large;
+  position:relative;
+  top: calc(50% - 10px);
+  padding-left: 5%;
+  color: #58636b;
+}
