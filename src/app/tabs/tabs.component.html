@@ -13,10 +13,10 @@
                 <th>Perdidos</th>
               </tr>
               <tr>
-                <td *ngIf="point; else noth">{{point.total}}</td>
-                <td *ngIf="point; else noth">{{point.total + point.utilizados + point.expirados}}</td>
-                <td *ngIf="point; else noth">{{point.utilizados}}</td>
-                <td *ngIf="point; else noth">{{point.expirados}}</td>
+                <td *ngIf="point; else noth">{{point.total - point.utilizados - point.expirados| number}}</td>
+                <td *ngIf="point; else noth">{{point.total| number}}</td>
+                <td *ngIf="point; else noth">{{point.utilizados| number}}</td>
+                <td *ngIf="point; else noth">{{point.expirados| number}}</td>
               </tr>
             </table>
             <ng-template #noth>
