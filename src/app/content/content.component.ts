@@ -14,7 +14,7 @@ export class ContentComponent implements OnInit {
   constructor(private contentService: ContentService) { }
 
   ngOnInit() {
-    this.getPoints()
+    this.getPoints();
   }
 
   getPoints = () =>{

@@ -1,0 +1,26 @@
+.rounded{
+  border-radius: 50%;
+}
+.glyphicon{
+  position:relative;
+  top: calc(50% - 10px);
+}
+.info-row{
+  background-color: #f4f5f7;
+  /*padding-top: 5%;*/
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e6e6e6;
+}
+.basic-row{
+  background-color: #f4f5f7;
+  /*padding-top: 5%;*/
+  margin-right: 20px;
+  margin-left: 20px;
+  font-weight: bold;
+  /*border-top: 1px solid #e6e6e6;*/
+}
+.profile{
+  overflow-x: hidden;
+}

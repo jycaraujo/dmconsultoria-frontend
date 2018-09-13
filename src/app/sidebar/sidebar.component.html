@@ -1,4 +1,4 @@
 <div class="sidebar">
-  <app-search></app-search>
-  <app-profile></app-profile>
+  <app-search *ngIf="show_search"></app-search>
+  <app-profile [profile]="profile" [show_profile]="show_profile"></app-profile>
 </div>

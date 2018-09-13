@@ -1,3 +1,35 @@
-<p>
-  profile works!
-</p>
+<div class="profile" *ngIf="show_profile">
+  <div class="row">
+    <div class="col-md-3" style="padding-top: 100px; padding-left: 30px">
+      <span class="glyphicon glyphicon-arrow-left" (click)="backtoSearch()"></span>
+    </div>
+    <div class="col-md-9">
+      <img class="rounded" src="http://loremflickr.com/g/150/150/face" width="200" height="200"/>
+    </div>
+  </div>
+  <br/>
+  <div class="row basic-row text-center" *ngIf="profile">
+    <div class="col-md-12">
+      <p>{{profile.nome}}</p>
+      <p>{{profile.cpf}}, Cód.: {{profile.codigo}}</p>
+    </div>
+  </div>
+  <br/><br/>
+  <div class="info-row">
+    <p><strong>Observações importantes</strong></p>
+    <p>{{profile.obs}}</p>
+  </div>
+  <div class="info-row">
+    <p><strong>Email</strong></p>
+    <p>{{profile.email}}</p>
+  </div>
+  <div class="info-row">
+    <p><strong>Telefone</strong></p>
+    <p>+{{profile.telefone.pais}} {{profile.telefone.area}} {{profile.telefone.numero}}</p>
+  </div>
+  <div class="info-row">
+    <p><strong>Endereço</strong></p>
+    <p>{{profile.endereco.tipo}} {{profile.endereco.logradouro}}, {{profile.endereco.numero}}, {{profile.endereco.complemento}}, {{profile.endereco.bairro}}, {{profile.endereco.cidade}}, {{profile.endereco.Estado}}, {{profile.endereco.Pais}}</p>
+  </div>
+
+</div>

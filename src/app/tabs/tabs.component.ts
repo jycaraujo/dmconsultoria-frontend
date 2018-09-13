@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Point} from "../points";
+import {SidebarService} from "../sidebar/sidebar.service";
 
 @Component({
   selector: 'app-tabs',
@@ -9,10 +10,16 @@ import {Point} from "../points";
 export class TabsComponent implements OnInit {
   @Input() point: Point;
 
-  constructor() { }
+  constructor(private sidebarService: SidebarService) { }
 
   ngOnInit() {
-    // console.log(this.point)
+    this.sidebarService.clean.subscribe(data =>{
+      this.point = {
+        "total":0,
+        "utilizados":0,
+        "expirados":0
+      }
+    })
   }
 
 }

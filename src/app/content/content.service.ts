@@ -11,4 +11,5 @@ export class ContentService {
   getPoints() {
     return this.http.get('../assets/data/points.json');
   }
+
 }
