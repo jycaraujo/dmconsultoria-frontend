@@ -8,9 +8,15 @@ import {SidebarService} from "../sidebar/sidebar.service";
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent implements OnInit {
-  @Input() point: Point;
+  @Input() point: Point = {
+    "total":0,
+    "utilizados":0,
+    "expirados":0
+  };
 
-  constructor(private sidebarService: SidebarService) { }
+  constructor(
+    private sidebarService: SidebarService
+  ) { }
 
   ngOnInit() {
     this.sidebarService.clean.subscribe(data =>{

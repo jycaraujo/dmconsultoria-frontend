@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {ResultListService} from "./result-list.service";
+import {Component, Input, OnInit} from '@angular/core';
 import {Client} from "../client";
+import {ContentService} from "../content/content.service";
+import {SidebarService} from "../sidebar/sidebar.service";
 
 @Component({
   selector: 'app-result-list',
@@ -9,22 +10,24 @@ import {Client} from "../client";
 })
 export class ResultListComponent implements OnInit {
 
-  clients: Client[];
+  @Input() clients: Client[];
 
-  constructor(private resService: ResultListService) { }
+  constructor(private contentService: ContentService,
+              private sidebarService: SidebarService) { }
 
   ngOnInit() {
-    this.getRecords();
   }
 
-  getRecords = () => {
-    this.resService.getRecords()
-      .subscribe((data: Client[]) => {
-        this.clients = data;
+
+  showInfo() {
+    this.contentService.getProfile()
+      .subscribe((data: any) => {
+        this.sidebarService.setprofile.emit(data);
+        this.sidebarService.changeVisibility(false);
+        this.contentService.tabs_value.emit(true)
         console.log(data);
       }, err => {
         console.log(err);
       });
   }
-
 }

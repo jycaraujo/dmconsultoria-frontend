@@ -4,7 +4,7 @@
       <div class="row header">
         <div class="col-md-10" style="padding: 0; height: 100%;">
           <div class="form-group full-field">
-            <input type="text" class="form-control full-field" placeholder="Search">
+            <input #myinput type="text" class="form-control full-field" placeholder="Search" (input) ="filterItem($event)">
           </div>
         </div>
         <div class="col-md-2 full-field" style="padding: 0;">
@@ -15,5 +15,5 @@
       </div>
     </form>
   </div>
-  <app-result-list></app-result-list>
+  <app-result-list [clients]="filteredItems"></app-result-list>
 </div>

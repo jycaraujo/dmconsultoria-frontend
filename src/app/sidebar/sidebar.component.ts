@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {SidebarService} from "./sidebar.service";
 
 @Component({
@@ -18,8 +18,10 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.changeSidebar();
-    this.getProfile();
+    // this.changeSidebar();
+    this.sidebarService.setprofile.subscribe(data =>{
+      this.profile = data;
+    });
     this.sidebarService.vis.subscribe(data => {
       this.changeSidebar();
     })
@@ -30,14 +32,6 @@ export class SidebarComponent implements OnInit {
     this.show_profile = !this.show_search;
   }
 
-  getProfile = () =>{
-    this.sidebarService.getProfile()
-      .subscribe((data: any) => {
-        this.profile = data;
-        console.log(data);
-      }, err => {
-        console.log(err);
-      });
-  }
+
 
 }

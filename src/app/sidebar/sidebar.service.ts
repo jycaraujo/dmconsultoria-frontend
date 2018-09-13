@@ -7,12 +7,9 @@ import {HttpClient} from "@angular/common/http";
 export class SidebarService {
   public vis: EventEmitter<any> = new EventEmitter();
   public clean: EventEmitter<any> = new EventEmitter();
+  public setprofile: EventEmitter<any> = new EventEmitter();
 
   constructor(private http: HttpClient) {
-  }
-
-  getProfile() {
-    return this.http.get('../assets/data/clienteselecionado.json');
   }
 
   changeVisibility(flag) {

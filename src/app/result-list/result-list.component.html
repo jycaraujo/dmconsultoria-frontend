@@ -1,6 +1,6 @@
 <div class="results">
   <br/>
-  <div class="content-row" *ngFor="let client of clients">
+  <div class="content-row" *ngFor="let client of clients" (click)="showInfo()">
     <p>{{client.email}}</p>
     <p><strong><i>{{client.nome}}</i></strong></p>
     <p>{{client.cpf}}</p>

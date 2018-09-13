@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ContentService} from "./content.service";
-import {Client} from "../client";
 import {Point} from "../points";
 
 @Component({
@@ -9,12 +8,18 @@ import {Point} from "../points";
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
-  point: Point;
+  point: Point = {
+    "total":0,
+    "utilizados":0,
+    "expirados":0
+  };
 
   constructor(private contentService: ContentService) { }
 
   ngOnInit() {
-    this.getPoints();
+    this.contentService.tabs_value.subscribe(data=>{
+      this.getPoints();
+    })
   }
 
   getPoints = () =>{

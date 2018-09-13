@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {SidebarService} from "../sidebar/sidebar.service";
 
 @Component({
   selector: 'app-invoice',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvoiceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sidebarService: SidebarService) { }
 
   ngOnInit() {
+    this.sidebarService.clean.subscribe(data =>{
+
+    });
   }
 
 }
